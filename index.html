@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background-color: azure;
+        }
+        section{
+            text-align: center;
+            font-size: 40px;
+            background-color: rgb(255, 116, 185);
+            border-radius: 25px;
+            padding: 20px;
+        }
+        p{
+            font-size: 60px;
+            margin: 20px;
+        }
+        button{
+            background-color: rgb(226, 43, 165);
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <span id="s2"></span>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">Mais</button>
+    <br>
+    <span id="s1"></span>
+    </section>
+    <script>
+        let num = 0
+
+        function aumentar(){
+            num = num +1
+            render()
+        }
+        function render(){
+            const p = document.querySelector("p")
+            p.innerText = num
+
+            const s1 = document.querySelector("#s1")
+            s1.innerText = num
+
+
+            const s2 = document.querySelector("#s2")
+            s2.innerText = num
+        }
+        render()
+    </script>
+</body>
+</html>
